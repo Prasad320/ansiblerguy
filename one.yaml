@@ -1,0 +1,9 @@
+---
+- name: Myplaybook
+  hosts: localhost
+  become: yes
+  tasks:
+   - name: Ping operation
+     ping:
+
+ 
