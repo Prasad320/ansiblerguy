@@ -1,67 +1,9 @@
-    1  subscription-manager register 
-    2  nmcli con up eth0 
-    3  subscription-manager register 
-    4  ip a
-    5  nmcli connection up eth0 
-    6  systemctl restart network
-    7  vim /etc/resolv.conf
-    8  systemctl restart network
-    9  subscription-manager register 
-   10  cat /var/log/rhsm/rhsm.log 
-   11  ll
-   12  subscription-manager register 
-   13  systemctl restart network
-   14  nmcli connection up eth0 
-   15  hostname
-   16  ip a
-   17  ip link delete namic eth0
-   18  ping google.com
-   19  vim /etc/resolv.conf
-   20  ping google.com
-   21  ip a
-   22  ip link delete virbr0
-   23  ip link delete virbr0-nic 
-   24  nmcli connection up eth0 
-   25  subscription-manager register 
-   26  subscription-manager available --list
-   27  subscription-manager list
-   28  subscription-manager list --available
-   29  subscription-manager attach --pool=8a85f9996bf5dce1016c007bf5ee5ab6
-   30  subscription-manager list --available
-   31  subscription-manager status
-   32  subscription-manager service-level --show
-   33  subscription-manager available
-   34  subscription-manager list
-   35  subscription-manager remove --pool=8a85f9996bf5dce1016c007bf5ee5ab6
-   36  subscription-manager list
-   37  subscription-manager attach --pool=8a85f9996bf5dce1016c007bf5ee5ab6
-   38  subscription-manager list --available
-   39  subscription-manager list --available |grep Openstack
-   40  subscription-manager list --available 
-   41  cat /etc/rhsm/rhsm.conf 
-   42  subscription-manager release
-   43  cat /etc/redhat-release 
-   44  subscription-manager release
-   45  yum repolist 
-   46  subscription-manager list --available 
-   47  subscription-manager remove --pool=8a85f9996bf5dce1016c007bf5ee5ab6
-   48  subscription-manager attach --pool=8a85f9996bf5dce1016c007bf5ee5ab6
-   49  subscription-manager clean
    50  ansible localhost -m lineinfile -a "path='/.motd' line='Ansible is super' create=yes"
-   51  cat ./motd 
    52  ansible localhost -m lineinfile -a "path='./motd' line='Ansible is super' create=yes"
    53  ansible localhost -m lineinfile -a "path='./motd' regexp='^superawesome' line='awesome'"
-   54  cat ./motd 
-   55  vim  ./motd 
    56  ansible localhost -m lineinfile -a "path='./motd' regexp='^Ansible is superawesome' line=' Ansible is awesome'"
-   57  cat ./motd 
    58  ansible localhost -m lineinfile -a "path='./motd' regexp='^Ansible is awesome' line=' Ansible is superawesome'"
-   59  cat ./motd 
    60  ansible localhost -m lineinfile -a "path='./motd' regexp='^Ansible is awesome' line=' Ansible is superawesome'"
-   61  cat ./motd 
    62  ansible localhost -m lineinfile -a "path='./motd' regexp='^awesome' line='superawesome'"
-   63* 
    64  ansible localhost -m lineinfile -a "path='./motd' regexp='^Ansible is awesome' line='Anisble is superawesome'"
    65  ansible localhost -m lineinfile -a "path='./motd' regexp='^Ansible is superawesome' line='Anisble is awesome'"
-   66  ll
-   67  history >> commands.txt

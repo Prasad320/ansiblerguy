@@ -1,0 +1,32 @@
+---
+- name: Host httpd webserver
+  hosts: localhost
+  tasks:
+  - name: Install apache packages 
+    yum:
+      name: httpd
+      state: present
+  - name: Add content to html
+    copy:
+      content: 'This is My playbook'
+      dest: /var/www/html/index.html
+  - name: Edit the configuration file
+    copy:
+      src: /root/one.conf
+      dest: /etc/httpd/conf.d/one.conf 
+  - name: ensure httpd is running
+    service:
+      name: httpd 
+      state: restarted
+  - name: Open port 80 for http access
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+  - name: Restart the firewalld service to load in the firewall changes
+    service: 
+      name: firewalld 
+      state: restarted
+  - name: Open Firefox
+    command: firefox http://serverpd1.example.com
+
