@@ -7,7 +7,7 @@
           number: 1
           state: present
 
-      - name: dbvg volume group creation
+      - name: vg volume group creation
         lvg:
            vg: vg1
            pvs: /dev/vdb1
